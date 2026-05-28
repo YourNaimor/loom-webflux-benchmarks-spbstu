@@ -1,12 +1,12 @@
-package uk.gleissner.loomwebflux.movie.repo;
+﻿package romario.sbpstu.loomwebflux.movie.repo;
 
 import com.google.common.collect.Lists;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
-import uk.gleissner.loomwebflux.config.AppProperties;
-import uk.gleissner.loomwebflux.movie.domain.Movie;
+import romario.sbpstu.loomwebflux.config.AppProperties;
+import romario.sbpstu.loomwebflux.movie.domain.Movie;
 
 import java.util.List;
 import java.util.Set;

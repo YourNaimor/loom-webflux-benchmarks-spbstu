@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.config;
+package romario.sbpstu.loomwebflux.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

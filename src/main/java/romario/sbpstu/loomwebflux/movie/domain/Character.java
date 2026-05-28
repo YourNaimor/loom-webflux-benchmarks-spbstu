@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.movie.domain;
+package romario.sbpstu.loomwebflux.movie.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

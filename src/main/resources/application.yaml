@@ -40,6 +40,18 @@ management:
     shutdown:
       enabled: true
 
+resilience4j:
+  circuitbreaker:
+    instances:
+      downstream:
+        failureRateThreshold: 50
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        registerHealthIndicator: true
+
 loom-webflux:
   repo-read-only: true
   jvm-metrics-csv-path: bin/jvm.csv

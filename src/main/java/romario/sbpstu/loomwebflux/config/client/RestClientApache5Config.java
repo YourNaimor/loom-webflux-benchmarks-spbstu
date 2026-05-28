@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.config.client;
+﻿package romario.sbpstu.loomwebflux.config.client;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,9 +14,9 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestClient;
-import uk.gleissner.loomwebflux.config.AppProperties;
+import romario.sbpstu.loomwebflux.config.AppProperties;
 
-import static uk.gleissner.loomwebflux.config.Profiles.REST_CLIENT_APACHE5;
+import static romario.sbpstu.loomwebflux.config.Profiles.REST_CLIENT_APACHE5;
 
 @Profile(REST_CLIENT_APACHE5)
 @Configuration

@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.movie;
+﻿package romario.sbpstu.loomwebflux.movie;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import uk.gleissner.loomwebflux.movie.domain.Movie;
+import romario.sbpstu.loomwebflux.movie.domain.Movie;
 
 import java.util.List;
 import java.util.Set;
 
-import static uk.gleissner.loomwebflux.common.Approaches.LOOM_NETTY;
-import static uk.gleissner.loomwebflux.common.Approaches.LOOM_TOMCAT;
-import static uk.gleissner.loomwebflux.common.Approaches.PLATFORM_TOMCAT;
-import static uk.gleissner.loomwebflux.common.Approaches.WEBFLUX_NETTY;
+import static romario.sbpstu.loomwebflux.common.Approaches.LOOM_NETTY;
+import static romario.sbpstu.loomwebflux.common.Approaches.LOOM_TOMCAT;
+import static romario.sbpstu.loomwebflux.common.Approaches.PLATFORM_TOMCAT;
+import static romario.sbpstu.loomwebflux.common.Approaches.WEBFLUX_NETTY;
 
 @RestController
 @RequiredArgsConstructor

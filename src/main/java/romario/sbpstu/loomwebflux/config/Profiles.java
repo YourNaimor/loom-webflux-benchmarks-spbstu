@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.config;
+package romario.sbpstu.loomwebflux.config;
 
 public class Profiles {
     public static final String NO_CACHE = "no-cache";

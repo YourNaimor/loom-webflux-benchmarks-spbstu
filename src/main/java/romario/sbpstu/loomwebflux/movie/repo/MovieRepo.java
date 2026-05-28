@@ -1,8 +1,8 @@
-package uk.gleissner.loomwebflux.movie.repo;
+﻿package romario.sbpstu.loomwebflux.movie.repo;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.ListCrudRepository;
-import uk.gleissner.loomwebflux.movie.domain.Movie;
+import romario.sbpstu.loomwebflux.movie.domain.Movie;
 
 import java.util.Set;
 

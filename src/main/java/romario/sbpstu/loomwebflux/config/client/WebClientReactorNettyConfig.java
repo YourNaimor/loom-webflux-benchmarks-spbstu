@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.config.client;
+﻿package romario.sbpstu.loomwebflux.config.client;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +11,7 @@ import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.netty.http.client.HttpClient;
 import reactor.netty.resources.ConnectionProvider;
-import uk.gleissner.loomwebflux.config.AppProperties;
+import romario.sbpstu.loomwebflux.config.AppProperties;
 
 import java.util.function.Function;
 

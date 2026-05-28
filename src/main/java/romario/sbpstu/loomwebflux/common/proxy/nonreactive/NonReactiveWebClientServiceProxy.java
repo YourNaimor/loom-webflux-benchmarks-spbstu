@@ -1,12 +1,12 @@
-package uk.gleissner.loomwebflux.common.proxy.nonreactive;
+﻿package romario.sbpstu.loomwebflux.common.proxy.nonreactive;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-import uk.gleissner.loomwebflux.common.proxy.reactive.ReactiveWebClientServiceProxy;
+import romario.sbpstu.loomwebflux.common.proxy.reactive.ReactiveWebClientServiceProxy;
 
-import static uk.gleissner.loomwebflux.config.Profiles.NO_REST_CLIENT_PROFILE_ACTIVE;
-import static uk.gleissner.loomwebflux.time.TimeController.NON_REACTIVE;
+import static romario.sbpstu.loomwebflux.config.Profiles.NO_REST_CLIENT_PROFILE_ACTIVE;
+import static romario.sbpstu.loomwebflux.time.TimeController.NON_REACTIVE;
 
 @Profile(NO_REST_CLIENT_PROFILE_ACTIVE)
 @Component

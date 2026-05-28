@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.config.client;
+﻿package romario.sbpstu.loomwebflux.config.client;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -9,12 +9,12 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.http.client.JdkClientHttpRequestFactory;
 import org.springframework.web.client.RestClient;
-import uk.gleissner.loomwebflux.config.AppProperties;
+import romario.sbpstu.loomwebflux.config.AppProperties;
 
 import java.net.http.HttpClient;
 
 import static java.net.http.HttpClient.Version.HTTP_1_1;
-import static uk.gleissner.loomwebflux.config.Profiles.REST_CLIENT_JDK;
+import static romario.sbpstu.loomwebflux.config.Profiles.REST_CLIENT_JDK;
 
 @Profile(REST_CLIENT_JDK)
 @Configuration

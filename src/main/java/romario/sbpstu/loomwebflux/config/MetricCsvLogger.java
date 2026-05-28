@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.config;
+package romario.sbpstu.loomwebflux.config;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.time;
+﻿package romario.sbpstu.loomwebflux.time;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
-import static uk.gleissner.loomwebflux.common.Approaches.LOOM_NETTY;
-import static uk.gleissner.loomwebflux.common.Approaches.LOOM_TOMCAT;
-import static uk.gleissner.loomwebflux.common.Approaches.PLATFORM_TOMCAT;
-import static uk.gleissner.loomwebflux.common.Approaches.WEBFLUX_NETTY;
+import static romario.sbpstu.loomwebflux.common.Approaches.LOOM_NETTY;
+import static romario.sbpstu.loomwebflux.common.Approaches.LOOM_TOMCAT;
+import static romario.sbpstu.loomwebflux.common.Approaches.PLATFORM_TOMCAT;
+import static romario.sbpstu.loomwebflux.common.Approaches.WEBFLUX_NETTY;
 
 @RestController
 @RequiredArgsConstructor

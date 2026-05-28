@@ -1,7 +1,7 @@
-package uk.gleissner.loomwebflux.common.proxy;
+﻿package romario.sbpstu.loomwebflux.common.proxy;
 
 import org.springframework.web.util.UriBuilder;
-import uk.gleissner.loomwebflux.time.TimeController;
+import romario.sbpstu.loomwebflux.time.TimeController;
 
 import java.net.URI;
 import java.util.function.Function;

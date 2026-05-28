@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.common;
+package romario.sbpstu.loomwebflux.common;
 
 public interface Approaches {
 

@@ -1,10 +1,10 @@
-package uk.gleissner.loomwebflux.time;
+﻿package romario.sbpstu.loomwebflux.time;
 
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
-import uk.gleissner.loomwebflux.common.AbstractService;
-import uk.gleissner.loomwebflux.common.proxy.nonreactive.NonReactiveServiceProxy;
-import uk.gleissner.loomwebflux.common.proxy.reactive.ReactiveServiceProxy;
+import romario.sbpstu.loomwebflux.common.AbstractService;
+import romario.sbpstu.loomwebflux.common.proxy.nonreactive.NonReactiveServiceProxy;
+import romario.sbpstu.loomwebflux.common.proxy.reactive.ReactiveServiceProxy;
 
 @Service
 public class TimeService extends AbstractService {

@@ -1,11 +1,11 @@
-package uk.gleissner.loomwebflux.common.proxy.reactive;
+﻿package romario.sbpstu.loomwebflux.common.proxy.reactive;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
-import static uk.gleissner.loomwebflux.time.TimeController.REACTIVE;
+import static romario.sbpstu.loomwebflux.time.TimeController.REACTIVE;
 
 @Component
 @RequiredArgsConstructor

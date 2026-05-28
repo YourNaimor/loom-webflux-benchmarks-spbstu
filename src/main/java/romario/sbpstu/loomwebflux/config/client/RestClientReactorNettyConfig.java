@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.config.client;
+﻿package romario.sbpstu.loomwebflux.config.client;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,11 +10,11 @@ import org.springframework.core.env.Environment;
 import org.springframework.http.client.ReactorClientHttpRequestFactory;
 import org.springframework.http.client.ReactorResourceFactory;
 import org.springframework.web.client.RestClient;
-import uk.gleissner.loomwebflux.config.AppProperties;
+import romario.sbpstu.loomwebflux.config.AppProperties;
 
-import static uk.gleissner.loomwebflux.config.Profiles.REST_CLIENT_REACTOR_NETTY;
-import static uk.gleissner.loomwebflux.config.client.WebClientReactorNettyConfig.REACTOR_NETTY_HTTP_CLIENT;
-import static uk.gleissner.loomwebflux.config.client.WebClientReactorNettyConfig.reactorNettyHttpClientConfigurer;
+import static romario.sbpstu.loomwebflux.config.Profiles.REST_CLIENT_REACTOR_NETTY;
+import static romario.sbpstu.loomwebflux.config.client.WebClientReactorNettyConfig.REACTOR_NETTY_HTTP_CLIENT;
+import static romario.sbpstu.loomwebflux.config.client.WebClientReactorNettyConfig.reactorNettyHttpClientConfigurer;
 
 @Profile(REST_CLIENT_REACTOR_NETTY)
 @Configuration

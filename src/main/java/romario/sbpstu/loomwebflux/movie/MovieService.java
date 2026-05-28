@@ -1,14 +1,14 @@
-package uk.gleissner.loomwebflux.movie;
+﻿package romario.sbpstu.loomwebflux.movie;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import uk.gleissner.loomwebflux.common.AbstractService;
-import uk.gleissner.loomwebflux.common.proxy.nonreactive.NonReactiveServiceProxy;
-import uk.gleissner.loomwebflux.common.proxy.reactive.ReactiveServiceProxy;
-import uk.gleissner.loomwebflux.movie.domain.Movie;
-import uk.gleissner.loomwebflux.movie.repo.CachedMovieRepo;
+import romario.sbpstu.loomwebflux.common.AbstractService;
+import romario.sbpstu.loomwebflux.common.proxy.nonreactive.NonReactiveServiceProxy;
+import romario.sbpstu.loomwebflux.common.proxy.reactive.ReactiveServiceProxy;
+import romario.sbpstu.loomwebflux.movie.domain.Movie;
+import romario.sbpstu.loomwebflux.movie.repo.CachedMovieRepo;
 
 import java.util.List;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.movie.repo;
+﻿package romario.sbpstu.loomwebflux.movie.repo;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,11 +6,11 @@ import lombok.val;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
-import uk.gleissner.loomwebflux.movie.domain.Award;
-import uk.gleissner.loomwebflux.movie.domain.Character;
-import uk.gleissner.loomwebflux.movie.domain.Genre;
-import uk.gleissner.loomwebflux.movie.domain.Movie;
-import uk.gleissner.loomwebflux.movie.domain.Person;
+import romario.sbpstu.loomwebflux.movie.domain.Award;
+import romario.sbpstu.loomwebflux.movie.domain.Character;
+import romario.sbpstu.loomwebflux.movie.domain.Genre;
+import romario.sbpstu.loomwebflux.movie.domain.Movie;
+import romario.sbpstu.loomwebflux.movie.domain.Person;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

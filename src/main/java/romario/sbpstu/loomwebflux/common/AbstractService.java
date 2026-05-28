@@ -1,10 +1,10 @@
-package uk.gleissner.loomwebflux.common;
+﻿package romario.sbpstu.loomwebflux.common;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
-import uk.gleissner.loomwebflux.common.proxy.nonreactive.NonReactiveServiceProxy;
-import uk.gleissner.loomwebflux.common.proxy.reactive.ReactiveServiceProxy;
+import romario.sbpstu.loomwebflux.common.proxy.nonreactive.NonReactiveServiceProxy;
+import romario.sbpstu.loomwebflux.common.proxy.reactive.ReactiveServiceProxy;
 
 import java.time.Duration;
 
