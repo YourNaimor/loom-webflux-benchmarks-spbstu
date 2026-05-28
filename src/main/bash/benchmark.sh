@@ -1,13 +1,12 @@
 #!/bin/bash
 # Runs all benchmarks and saves results to build/results.
 
-approaches="loom-tomcat,loom-netty,webflux-netty"
+approaches="loom-tomcat,webflux-netty"
 scenariosDir="src/main/resources/scenarios"
-relativeScenariosPath="scenarios-default.csv"
+relativeScenariosPath="scenarios-fintech.csv"
 resultsDir=build/results
 resultsCsvFile="$resultsDir/results.csv"
 resultsPngFile="$resultsDir/results.png"
-resultsNettyPngFile="$resultsDir/results-netty.png"
 keep_csv=false
 
 log() {
@@ -21,8 +20,7 @@ print_usage() {
   echo "SCENARIO_FILE:     Scenario configuration CSV file in src/main/resources/scenarios/. Default: scenarios-default.csv"
   echo
   echo "OPTION:"
-  echo "  -a <approaches>  Comma-separated list of approaches to test. Default: loom-tomcat, loom-netty, webflux-netty"
-  echo "                   Supported approaches: platform-tomcat, loom-tomcat, loom-netty, webflux-netty"
+  echo "  -a <approaches>  Comma-separated list of approaches to test. Default: loom-tomcat, webflux-netty"
   echo "  -C               Keep CSV files used to create chart. Default: false"
   echo "  -h               Print this help"
 }
@@ -96,7 +94,6 @@ tail -n +2 "$scenariosFile" | while IFS=',' read -r scenario k6Config serverProf
 done
 
 ./src/main/python/results_chart.py -i "$resultsCsvFile" -o "$resultsPngFile"
-./src/main/python/results_chart.py -i "$resultsCsvFile" -o "$resultsNettyPngFile" -a "loom-netty,webflux-netty" || true
 
 endSeconds=$( date +%s )
 ./src/main/bash/generate-results-markdown.sh "$scenariosFile" "$resultsDir" "$approaches" "$startSeconds" "$endSeconds"

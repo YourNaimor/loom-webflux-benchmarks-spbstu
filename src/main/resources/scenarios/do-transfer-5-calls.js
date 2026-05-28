@@ -1,42 +1,30 @@
-/**
- * Тест 2 (диплом): do-transfer — глубокая цепочка вызовов (5 downstream).
- * 5 000 VU, 1 000 RPS нагрузки на transfers-сервис.
- * Каждый запрос порождает 5 внутренних вызовов: clients, products, auth, payment, history.
- * Метрика: p50/p99 латентность, CPU, RPS, % ошибок.
- */
 import http from 'k6/http';
 import { check } from 'k6';
 
-const approach = __ENV.APPROACH || 'loom-tomcat';
-const baseUrl = __ENV.SERVICE_API_BASE_URL;
-const url = `${baseUrl}/${approach}/transfers/transfer`;
+const url = __ENV.SERVICE_API_BASE_URL + "/transfers/transfer"
+
+export default function () {
+    const userId = 'user-' + Math.floor(Math.random() * 1000);
+    const res = http.post(url, JSON.stringify({
+        userId,
+        amount: Math.floor(Math.random() * 10000) + 100,
+        toAccountId: 'ACC-' + Math.floor(Math.random() * 100),
+    }), {
+        headers: { 'Content-Type': 'application/json', 'X-User-Id': userId },
+    });
+    check(res, { 'status 200': (r) => r.status === 200 });
+}
 
 export const options = {
-    discardResponseBodies: true,
+    discardResponseBodies: false,
     scenarios: {
-        deep_call_stack: {
+        deep_call: {
             executor: 'constant-arrival-rate',
-            rate: 1000,
+            rate: parseInt(__ENV.RPS || '1000'),
             timeUnit: '1s',
-            preAllocatedVUs: 5000,
-            maxVUs: 5000,
-            duration: '3m',
+            preAllocatedVUs: parseInt(__ENV.VUS || '5000'),
+            maxVUs: parseInt(__ENV.VUS || '5000'),
+            duration: __ENV.DURATION_IN_SECONDS + 's',
         },
     },
 };
-
-export default function () {
-    const userId = `user-${Math.floor(Math.random() * 1000)}`;
-    const payload = JSON.stringify({
-        userId,
-        amount: Math.floor(Math.random() * 10000) + 100,
-        toAccountId: `ACC-${Math.floor(Math.random() * 100)}`,
-    });
-    const res = http.post(url, payload, {
-        headers: {
-            'Content-Type': 'application/json',
-            'X-User-Id': userId,
-        },
-    });
-    check(res, { 'transfer 200': (r) => r.status === 200 });
-}
