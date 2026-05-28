@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.movie
+﻿package romario.sbpstu.loomwebflux.movie
 
 import nl.altindag.log.LogCaptor
 import org.assertj.core.api.Assertions.assertThat
@@ -7,15 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.test.web.reactive.server.WebTestClient
 import org.springframework.web.reactive.function.BodyInserters
-import uk.gleissner.loomwebflux.common.AbstractService
-import uk.gleissner.loomwebflux.fixture.AbstractIT
-import uk.gleissner.loomwebflux.fixture.CartesianTestApproachesAndDelayCallDepths
-import uk.gleissner.loomwebflux.fixture.LogCaptorFixture.assertCorrectThreadType
-import uk.gleissner.loomwebflux.movie.domain.Directors.davidLynch
-import uk.gleissner.loomwebflux.movie.domain.Movie
-import uk.gleissner.loomwebflux.movie.domain.Movies.mulhollandDrive
-import uk.gleissner.loomwebflux.movie.domain.Movies.theStraightStory
-import uk.gleissner.loomwebflux.movie.repo.MovieRepo
+import romario.sbpstu.loomwebflux.common.AbstractService
+import romario.sbpstu.loomwebflux.fixture.AbstractIT
+import romario.sbpstu.loomwebflux.fixture.CartesianTestApproachesAndDelayCallDepths
+import romario.sbpstu.loomwebflux.fixture.LogCaptorFixture.assertCorrectThreadType
+import romario.sbpstu.loomwebflux.movie.domain.Directors.davidLynch
+import romario.sbpstu.loomwebflux.movie.domain.Movie
+import romario.sbpstu.loomwebflux.movie.domain.Movies.mulhollandDrive
+import romario.sbpstu.loomwebflux.movie.domain.Movies.theStraightStory
+import romario.sbpstu.loomwebflux.movie.repo.MovieRepo
 import java.time.Duration
 import java.time.Instant.now
 

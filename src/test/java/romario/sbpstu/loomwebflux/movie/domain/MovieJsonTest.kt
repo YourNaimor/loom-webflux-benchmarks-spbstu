@@ -1,10 +1,10 @@
-package uk.gleissner.loomwebflux.movie.domain
+﻿package romario.sbpstu.loomwebflux.movie.domain
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.autoconfigure.json.JsonTest
 import org.springframework.boot.test.json.JacksonTester
-import uk.gleissner.loomwebflux.movie.domain.Genre.ROMANCE
+import romario.sbpstu.loomwebflux.movie.domain.Genre.ROMANCE
 import java.time.LocalDate
 
 

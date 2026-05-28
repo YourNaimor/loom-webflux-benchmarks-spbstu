@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.movie.repo
+﻿package romario.sbpstu.loomwebflux.movie.repo
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
@@ -11,11 +11,11 @@ import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
 import org.springframework.cache.Cache
 import org.springframework.cache.CacheManager
-import uk.gleissner.loomwebflux.config.AppProperties
-import uk.gleissner.loomwebflux.movie.domain.Directors.davidLynch
-import uk.gleissner.loomwebflux.movie.domain.Movie
-import uk.gleissner.loomwebflux.movie.domain.Movies.mulhollandDrive
-import uk.gleissner.loomwebflux.movie.domain.Movies.theStraightStory
+import romario.sbpstu.loomwebflux.config.AppProperties
+import romario.sbpstu.loomwebflux.movie.domain.Directors.davidLynch
+import romario.sbpstu.loomwebflux.movie.domain.Movie
+import romario.sbpstu.loomwebflux.movie.domain.Movies.mulhollandDrive
+import romario.sbpstu.loomwebflux.movie.domain.Movies.theStraightStory
 
 class CachedMovieRepoTest {
 

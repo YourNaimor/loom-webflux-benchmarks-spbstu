@@ -1,10 +1,10 @@
-package uk.gleissner.loomwebflux.config
+﻿package romario.sbpstu.loomwebflux.config
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.mock
-import uk.gleissner.loomwebflux.config.MetricCsvLogger.HEADER_ROW
-import uk.gleissner.loomwebflux.config.MetricCsvLogger.JvmMetrics
+import romario.sbpstu.loomwebflux.config.MetricCsvLogger.HEADER_ROW
+import romario.sbpstu.loomwebflux.config.MetricCsvLogger.JvmMetrics
 import java.nio.file.Files
 import java.nio.file.Path
 

@@ -1,6 +1,6 @@
-package uk.gleissner.loomwebflux.movie.domain
+﻿package romario.sbpstu.loomwebflux.movie.domain
 
-import uk.gleissner.loomwebflux.movie.domain.Directors.davidLynch
+import romario.sbpstu.loomwebflux.movie.domain.Directors.davidLynch
 import java.time.LocalDate
 
 object Movies {

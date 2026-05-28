@@ -48,6 +48,9 @@ extra["httpcore5.version"] = "5.3"
 dependencies {
     implementation("com.github.ben-manes.caffeine:caffeine")
     implementation("com.google.guava:guava:33.4.+")
+    implementation("io.github.resilience4j:resilience4j-spring-boot3:2.2.+")
+    implementation("io.github.resilience4j:resilience4j-reactor:2.2.+")
+    implementation("org.springframework.boot:spring-boot-starter-aop")
     implementation("io.github.oshai:kotlin-logging-jvm:7.0.+")
     implementation("org.apache.httpcomponents.client5:httpclient5")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:2.2.+")

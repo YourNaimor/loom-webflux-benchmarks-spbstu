@@ -1,8 +1,8 @@
-package uk.gleissner.loomwebflux.movie
+﻿package romario.sbpstu.loomwebflux.movie
 
 import org.springframework.test.context.ActiveProfiles
 import org.testcontainers.junit.jupiter.Testcontainers
-import uk.gleissner.loomwebflux.config.Profiles.REST_CLIENT_REACTOR_NETTY
+import romario.sbpstu.loomwebflux.config.Profiles.REST_CLIENT_REACTOR_NETTY
 
 @ActiveProfiles(REST_CLIENT_REACTOR_NETTY)
 @Testcontainers

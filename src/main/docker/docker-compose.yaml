@@ -1,0 +1,28 @@
+name: infra
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:16
+    command: -c 'max_connections=500'
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432/tcp
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    stdin_open: true
+    tty: true
+
+  redis:
+    container_name: redis
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --maxmemory 512mb --maxmemory-policy allkeys-lru
+    ports:
+      - 6379:6379/tcp
+
+volumes:
+  postgres-data:
