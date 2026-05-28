@@ -1,10 +1,10 @@
-package uk.gleissner.loomwebflux.fixture
+﻿package romario.sbpstu.loomwebflux.fixture
 
 import nl.altindag.log.LogCaptor
 import org.assertj.core.api.Assertions.assertThat
-import uk.gleissner.loomwebflux.common.Approaches.LOOM_NETTY
-import uk.gleissner.loomwebflux.common.Approaches.LOOM_TOMCAT
-import uk.gleissner.loomwebflux.common.Approaches.PLATFORM_TOMCAT
+import romario.sbpstu.loomwebflux.common.Approaches.LOOM_NETTY
+import romario.sbpstu.loomwebflux.common.Approaches.LOOM_TOMCAT
+import romario.sbpstu.loomwebflux.common.Approaches.PLATFORM_TOMCAT
 
 object LogCaptorFixture {
     

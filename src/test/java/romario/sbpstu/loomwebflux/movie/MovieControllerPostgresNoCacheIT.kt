@@ -1,8 +1,8 @@
-package uk.gleissner.loomwebflux.movie
+﻿package romario.sbpstu.loomwebflux.movie
 
 import org.junit.jupiter.api.Disabled
 import org.springframework.test.context.ActiveProfiles
-import uk.gleissner.loomwebflux.config.Profiles.NO_CACHE
+import romario.sbpstu.loomwebflux.config.Profiles.NO_CACHE
 
 @ActiveProfiles(NO_CACHE)
 internal class MovieControllerPostgresNoCacheIT : MovieControllerPostgresIT() {

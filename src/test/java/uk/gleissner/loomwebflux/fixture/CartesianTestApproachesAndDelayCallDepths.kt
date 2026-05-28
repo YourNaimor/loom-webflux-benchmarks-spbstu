@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.fixture
+﻿package romario.sbpstu.loomwebflux.fixture
 
 import org.junitpioneer.jupiter.cartesian.CartesianTest
 import kotlin.annotation.AnnotationRetention.RUNTIME

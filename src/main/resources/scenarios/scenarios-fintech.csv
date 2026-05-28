@@ -1,0 +1,9 @@
+scenario,k6Config,approach,warmupDurationInSeconds,testDurationInSeconds,notes
+40k-vus-get-history-loom,get-history-40k-vus.js,loom-tomcat,30,180,"40k VU устойчивая нагрузка на gateway (loom-tomcat)"
+40k-vus-get-history-webflux,get-history-40k-vus.js,webflux-netty,30,180,"40k VU устойчивая нагрузка на gateway (webflux-netty)"
+sharp-spikes-20k-loom,sharp-spikes-20k.js,loom-tomcat,0,180,"Серия резких всплесков до 20k RPS (loom-tomcat)"
+sharp-spikes-20k-webflux,sharp-spikes-20k.js,webflux-netty,0,180,"Серия резких всплесков до 20k RPS (webflux-netty)"
+do-transfer-5-calls-loom,do-transfer-5-calls.js,loom-tomcat,30,180,"5k VU / 1k RPS / глубина цепочки 5 (loom-tomcat)"
+do-transfer-5-calls-webflux,do-transfer-5-calls.js,webflux-netty,30,180,"5k VU / 1k RPS / глубина цепочки 5 (webflux-netty)"
+soaktest-10k-loom,soaktest-10k.js,loom-tomcat,0,1200,"Плавный подъём до 10k VU за 20 мин (loom-tomcat)"
+soaktest-10k-webflux,soaktest-10k.js,webflux-netty,0,1200,"Плавный подъём до 10k VU за 20 мин (webflux-netty)"

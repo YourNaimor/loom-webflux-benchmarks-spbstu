@@ -1,11 +1,11 @@
-package uk.gleissner.loomwebflux.movie
+﻿package romario.sbpstu.loomwebflux.movie
 
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection
 import org.springframework.test.context.ActiveProfiles
 import org.testcontainers.containers.PostgreSQLContainer
 import org.testcontainers.junit.jupiter.Container
 import org.testcontainers.junit.jupiter.Testcontainers
-import uk.gleissner.loomwebflux.config.Profiles.POSTGRES
+import romario.sbpstu.loomwebflux.config.Profiles.POSTGRES
 
 @ActiveProfiles(POSTGRES)
 @Testcontainers

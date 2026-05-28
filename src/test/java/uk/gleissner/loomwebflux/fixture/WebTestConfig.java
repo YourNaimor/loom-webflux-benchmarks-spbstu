@@ -1,4 +1,4 @@
-package uk.gleissner.loomwebflux.fixture;
+﻿package romario.sbpstu.loomwebflux.fixture;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
