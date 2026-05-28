@@ -1,0 +1,13 @@
+name: benchmark
+on:
+  schedule:
+    - cron: '0 2 2 * *' # 2nd of each month at 2am
+  workflow_dispatch:
+jobs:
+  call-reusable-build:
+    permissions:
+      contents: write
+    uses: ./.github/workflows/reusable-build.yaml
+    secrets: inherit
+    with:
+      scenarios-path: scenarios-ci.csv # Trimmed version of scenarios-default.csv since GitHub builds limited to 6h run-time and producing max ca. 16 GiB of disk data

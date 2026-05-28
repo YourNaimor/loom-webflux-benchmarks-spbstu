@@ -1,0 +1,360 @@
+[
+  {
+    "title": "Annie Hall",
+    "releaseYear": 1977,
+    "genre": "ROMANCE",
+    "characters": [
+      {
+        "actor": {
+          "firstName": "Woody",
+          "lastName": "Allen",
+          "birthday": "1935-11-30"
+        },
+        "name": "Alvy Singer"
+      },
+      {
+        "actor": {
+          "firstName": "Diane",
+          "lastName": "Keaton",
+          "birthday": "1946-01-05"
+        },
+        "name": "Annie Hall"
+      }
+    ],
+    "directors": [
+      {
+        "firstName": "Woody",
+        "lastName": "Allen",
+        "birthday": "1935-11-30"
+      }
+    ],
+    "writers": [
+      {
+        "firstName": "Woody",
+        "lastName": "Allen",
+        "birthday": "1935-11-30"
+      }
+    ],
+    "awards": [
+      {
+        "name": "Academy Award",
+        "year": 1978
+      },
+      {
+        "name": "Golden Globe",
+        "year": 1978
+      }
+    ],
+    "rating": 8.0
+  },
+  {
+    "title": "Manhattan",
+    "releaseYear": 1979,
+    "genre": "DRAMA",
+    "characters": [
+      {
+        "actor": {
+          "firstName": "Woody",
+          "lastName": "Allen",
+          "birthday": "1935-11-30"
+        },
+        "name": "Isaac Davis"
+      },
+      {
+        "actor": {
+          "firstName": "Diane",
+          "lastName": "Keaton",
+          "birthday": "1946-01-05"
+        },
+        "name": "Mary Wilkie"
+      }
+    ],
+    "directors": [
+      {
+        "firstName": "Woody",
+        "lastName": "Allen",
+        "birthday": "1935-11-30"
+      }
+    ],
+    "writers": [
+      {
+        "firstName": "Woody",
+        "lastName": "Allen",
+        "birthday": "1935-11-30"
+      }
+    ],
+    "awards": [
+      {
+        "name": "BAFTA Award",
+        "year": 1980
+      }
+    ],
+    "rating": 7.9
+  },
+  {
+    "title": "Zelig",
+    "releaseYear": 1983,
+    "genre": "COMEDY",
+    "characters": [
+      {
+        "actor": {
+          "firstName": "Woody",
+          "lastName": "Allen",
+          "birthday": "1935-11-30"
+        },
+        "name": "Leonard Zelig"
+      },
+      {
+        "actor": {
+          "firstName": "Mia",
+          "lastName": "Farrow",
+          "birthday": "1945-02-09"
+        },
+        "name": "Dr. Eudora Nesbitt Fletcher"
+      }
+    ],
+    "directors": [
+      {
+        "firstName": "Woody",
+        "lastName": "Allen",
+        "birthday": "1935-11-30"
+      }
+    ],
+    "writers": [
+      {
+        "firstName": "Woody",
+        "lastName": "Allen",
+        "birthday": "1935-11-30"
+      }
+    ],
+    "awards": [
+      {
+        "name": "Golden Globe",
+        "year": 1984
+      }
+    ],
+    "rating": 7.8
+  },
+  {
+    "title": "North by Northwest",
+    "releaseYear": 1959,
+    "genre": "ACTION",
+    "characters": [
+      {
+        "actor": {
+          "firstName": "Cary",
+          "lastName": "Grant",
+          "birthday": "1904-01-18"
+        },
+        "name": "Roger O. Thornhill"
+      },
+      {
+        "actor": {
+          "firstName": "Eva Marie",
+          "lastName": "Saint",
+          "birthday": "1924-07-04"
+        },
+        "name": "Eve Kendall"
+      }
+    ],
+    "directors": [
+      {
+        "firstName": "Alfred",
+        "lastName": "Hitchcock",
+        "birthday": "1899-08-13"
+      }
+    ],
+    "writers": [
+      {
+        "firstName": "Ernest",
+        "lastName": "Lehman",
+        "birthday": null
+      }
+    ],
+    "awards": [
+      {
+        "name": "Academy Award",
+        "year": 1960
+      }
+    ],
+    "rating": 8.4
+  },
+  {
+    "title": "Rear Window",
+    "releaseYear": 1954,
+    "genre": "MYSTERY",
+    "characters": [
+      {
+        "actor": {
+          "firstName": "James",
+          "lastName": "Stewart",
+          "birthday": "1908-05-20"
+        },
+        "name": "L.B. Jefferies"
+      },
+      {
+        "actor": {
+          "firstName": "Grace",
+          "lastName": "Kelly",
+          "birthday": "1929-11-12"
+        },
+        "name": "Lisa Carol Fremont"
+      }
+    ],
+    "directors": [
+      {
+        "firstName": "Alfred",
+        "lastName": "Hitchcock",
+        "birthday": "1899-08-13"
+      }
+    ],
+    "writers": [
+      {
+        "firstName": "Joseph",
+        "lastName": "Stefano",
+        "birthday": null
+      }
+    ],
+    "awards": [
+      {
+        "name": "Golden Globe",
+        "year": 1955
+      }
+    ],
+    "rating": 8.5
+  },
+  {
+    "title": "Vertigo",
+    "releaseYear": 1958,
+    "genre": "MYSTERY",
+    "characters": [
+      {
+        "actor": {
+          "firstName": "James",
+          "lastName": "Stewart",
+          "birthday": "1908-05-20"
+
+        },
+        "name": "John 'Scottie' Ferguson"
+      },
+      {
+        "actor": {
+          "firstName": "Kim",
+          "lastName": "Novak",
+          "birthday": "1933-02-13"
+        },
+        "name": "Madeleine Elster"
+      }
+    ],
+    "directors": [
+      {
+        "firstName": "Alfred",
+        "lastName": "Hitchcock",
+        "birthday": "1899-08-13"
+      }
+    ],
+    "writers": [
+      {
+        "firstName": "Alec",
+        "lastName": "Coppel",
+        "birthday": null
+      }
+    ],
+    "awards": [
+      {
+        "name": "National Film Registry",
+        "year": 1989
+      }
+    ],
+    "rating": 8.3
+  },
+  {
+    "title": "2001: A Space Odyssey",
+    "releaseYear": 1968,
+    "genre": "SCIENCE_FICTION",
+    "characters": [
+      {
+        "actor": {
+          "firstName": "Keir",
+          "lastName": "Dullea",
+          "birthday": "1936-05-30"
+        },
+        "name": "Dr. Dave Bowman"
+      },
+      {
+        "actor": {
+          "firstName": "Gary",
+          "lastName": "Lockwood",
+          "birthday": "1937-02-21"
+        },
+        "name": "Dr. Frank Poole"
+      }
+    ],
+    "directors": [
+      {
+        "firstName": "Stanley",
+        "lastName": "Kubrick",
+        "birthday": "1928-07-26"
+      }
+    ],
+    "writers": [
+      {
+        "firstName": "Stanley",
+        "lastName": "Kubrick",
+        "birthday": "1928-07-26"
+      }
+    ],
+    "awards": [
+      {
+        "name": "Academy Award",
+        "year": 1969
+      }
+    ],
+    "rating": 8.7
+  },
+  {
+    "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+    "releaseYear": 1964,
+    "genre": "COMEDY",
+    "characters": [
+      {
+        "actor": {
+          "firstName": "Peter",
+          "lastName": "Sellers",
+          "birthday": "1925-09-08"
+        },
+        "name": "Group Capt. Lionel Mandrake / President Merkin Muffley / Dr. Strangelove"
+      },
+      {
+        "actor": {
+          "firstName": "George C.",
+          "lastName": "Scott",
+          "birthday": "1927-10-18"
+
+        },
+        "name": "Gen. 'Buck' Turgidson"
+      }
+    ],
+    "directors": [
+      {
+        "firstName": "Stanley",
+        "lastName": "Kubrick",
+        "birthday": "1928-07-26"
+      }
+    ],
+    "writers": [
+      {
+        "firstName": "Stanley",
+        "lastName": "Kubrick",
+        "birthday": "1928-07-26"
+      }
+    ],
+    "awards": [
+      {
+        "name": "BAFTA Award",
+        "year": 1965
+      }
+    ],
+    "rating": 8.4
+  }
+]

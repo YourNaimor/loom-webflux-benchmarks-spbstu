@@ -1,0 +1,118 @@
+name: build
+on:
+  workflow_call:
+    inputs:
+      scenarios-path:
+        required: false
+        type: string
+        default: scenarios-default.csv
+        description: Path of CSV file with test scenarios
+      approaches:
+        required: false
+        type: string
+        default: platform-tomcat,loom-tomcat,loom-netty,webflux-netty
+        description: Comma-separated server implementation approaches to test
+
+jobs:
+  build:
+
+    strategy:
+      fail-fast: false
+      matrix:
+        java-version: [ 21, 25 ]
+        os: [ Ubuntu-22.04, ubuntu-24.04 ]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Java ${{ matrix.java-version }}
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.java-version }}
+          distribution: corretto
+          cache: 'gradle'
+
+      - name: Install k6
+        run: |
+          sudo gpg -k
+          sudo gpg --no-default-keyring --keyring /usr/share/keyrings/k6-archive-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69
+          echo "deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k6.list
+          sudo apt-get update -y
+          sudo apt-get install k6        
+
+      - name: Install Python, sysstat and inxi
+        run: sudo apt-get install -y python3 python3-matplotlib python3-pytest sysstat inxi
+
+      - name: Test Python
+        run: python3 -m pytest
+
+      - name: Build and Test Java
+        run: ./gradlew dependencies build jacocoTestReport
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
+
+      - name: Log machine info
+        run: inxi -CMDS -c0 && df -h && du -h
+
+      - name: Benchmark using ${{ inputs.scenarios-path }}
+        run: |
+          echo "Optimized system for benchmark"
+          sudo sysctl -w net.ipv4.ip_local_port_range="1024 65535"
+          sudo sysctl -w net.ipv4.tcp_tw_reuse=1          
+          sudo sysctl -w fs.file-max=1048576
+          sudo sysctl -p
+          sysctl net.ipv4.ip_local_port_range net.ipv4.tcp_tw_reuse fs.file-max
+          echo "Starting benchmark using scenarios file ${{ inputs.scenarios-path }} and approaches ${{ inputs.approaches }}"
+          ./benchmark.sh -a ${{ inputs.approaches }} ${{ inputs.scenarios-path }}
+
+      - name: Log machine info
+        run: inxi -CMDS -c0 && df -h && du -h
+
+      - name: Verify results
+        run: |
+          IFS=',' read -ra approach_array <<< "${{ inputs.approaches }}"
+          for approach in "${approach_array[@]}"; do
+            for scenarioPath in build/results/*/; do
+              chartFilename=$scenarioPath$approach.png
+              if ! file "$chartFilename" | grep -q "PNG"; then
+                echo "Verification error: Image $chartFilename missing or invalid"
+                exit 1
+              else 
+                echo "Chart $chartFilename exists"
+              fi
+            done
+          done        
+          resultsCsvFilename=build/results/results.csv
+          if ! file $resultsCsvFilename | grep -q "CSV"; then
+            echo "Verification error: $resultsCsvFilename missing or invalid"
+            exit 1
+          else 
+            echo "Results file $resultsCsvFilename exists"
+          fi
+
+      - name: Copy results
+        continue-on-error: true
+        run: |
+          scenariosPath=${{ inputs.scenarios-path }} 
+          scenarios=${scenariosPath%%.*}
+          resultsDir=results/ci/$scenarios/${{ matrix.os }}/java-${{ matrix.java-version }}/
+          mkdir -p $resultsDir
+          cp build/results/results* $resultsDir
+          git pull
+
+      - name: Commit results
+        continue-on-error: true
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          skip_dirty_check: true
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Results for Java ${{ matrix.java-version }} and ${{ matrix.os }}
+          path: build/results/

@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: loom-webflux
+  cache:
+    caffeine:
+      spec: expireAfterWrite=1h
+  datasource:
+    hikari:
+      connectionTimeout: 60000
+      maximumPoolSize: 500
+      registerMbeans: true
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+    hibernate:
+      ddl-auto: update
+  main:
+    lazy-initialization: true
+  threads:
+    virtual:
+      enabled: true
+
+server:
+  http2:
+    enabled: true
+  tomcat:
+    accept-count: 2000 # see https://github.com/chrisgleissner/loom-webflux-benchmarks/issues/49
+    max-connections: ${loom-webflux.client.max-connections}
+    threads:
+      max: ${loom-webflux.client.max-connections}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health, shutdown"
+  endpoint:
+    shutdown:
+      enabled: true
+
+loom-webflux:
+  repo-read-only: true
+  jvm-metrics-csv-path: bin/jvm.csv
+  client:
+    max-connections: 65000
+    connect-timeout: 20s
+    pending-acquire-timeout: 60s
+    pending-acquire-max-count: ${loom-webflux.client.max-connections}
+    response-timeout: ${loom-webflux.client.pending-acquire-timeout}
+
+
