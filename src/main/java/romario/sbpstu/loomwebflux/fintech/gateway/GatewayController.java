@@ -1,4 +1,4 @@
-﻿package romario.sbpstu.loomwebflux.fintech.gateway;
+package romario.sbpstu.loomwebflux.fintech.gateway;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,13 +12,6 @@ import java.util.List;
 import static romario.sbpstu.loomwebflux.common.Approaches.LOOM_TOMCAT;
 import static romario.sbpstu.loomwebflux.common.Approaches.WEBFLUX_NETTY;
 
-/**
- * Gateway-контроллер: единая точка входа для всего входящего трафика.
- * Сценарий 1 диплома: получение истории операций (глубина цепочки вызовов = 1).
- *
- * GET /loom-tomcat/gateway/history    → блокирующая реализация (Virtual Threads)
- * GET /webflux-netty/gateway/history  → реактивная реализация (Event Loop)
- */
 @RestController
 @RequiredArgsConstructor
 public class GatewayController {

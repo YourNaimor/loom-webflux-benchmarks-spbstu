@@ -1,8 +1,0 @@
-loom-webflux:
-  repo-read-only: false
-
-logging:
-  level:
-    uk.gleissner.loomwebflux: debug
-#    org.hibernate.SQL: debug
-

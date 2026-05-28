@@ -1,4 +1,4 @@
-﻿package romario.sbpstu.loomwebflux.fintech.transfers;
+package romario.sbpstu.loomwebflux.fintech.transfers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,13 +11,6 @@ import romario.sbpstu.loomwebflux.fintech.domain.TransferResponse;
 import static romario.sbpstu.loomwebflux.common.Approaches.LOOM_TOMCAT;
 import static romario.sbpstu.loomwebflux.common.Approaches.WEBFLUX_NETTY;
 
-/**
- * Контроллер сервиса transfers.
- * Сценарий 2 диплома: выполнение платёжной транзакции (глубина цепочки = 5 вызовов).
- *
- * POST /loom-tomcat/transfers/transfer   → блокирующая реализация (Virtual Threads)
- * POST /webflux-netty/transfers/transfer → реактивная реализация (Event Loop)
- */
 @RestController
 @RequiredArgsConstructor
 public class TransferController {
